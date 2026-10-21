@@ -272,14 +272,64 @@ const ICONS = {
 };
 const MONO_ICONS = new Set(['github', 'nextdotjs', 'aws']);
 
+// Ícones de linha próprios para conceitos sem logótipo (traço = cor do texto)
+const LINE_ICONS = {
+  unit: '<path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/><path d="M7 15h10"/>',
+  integration: '<path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><rect x="7" y="7" width="10" height="10" rx="2"/>',
+  e2e: '<circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="6" r="2.5"/><path d="M7.5 18H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h7.5"/>',
+  regression: '<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 8v4l3 2"/>',
+  api: '<path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/>',
+  testplan: '<rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 2h6v4H9zM9 13l2 2 4-4"/>',
+  scrum: '<path d="M21 12a9 9 0 0 1-15.5 6.3M3 12A9 9 0 0 1 18.5 5.7"/><path d="M18 2v4h-4M6 22v-4h4"/>',
+  kanban: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M5.5 7h2M11 7h2M11 11h2M16.5 7h2"/>',
+  sparkles: '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>',
+  brain: '<rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  bot: '<rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13v1M15 13v1M2 13v3M22 13v3"/><circle cx="12" cy="3" r="1"/>',
+  ussd: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M9 6h6v4H9zM9 14h.01M12 14h.01M15 14h.01M9 17h.01M12 17h.01M15 17h.01"/>',
+  rest: '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11l7.4-3.8M8.3 13l7.4 3.8"/>',
+  wallet: '<path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><path d="M21 10h-5a2 2 0 0 0 0 4h5z"/>',
+  erp: '<path d="M12 2 2 7l10 5 10-5z"/><path d="M2 12l10 5 10-5M2 17l10 5 10-5"/>',
+  sms: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/>',
+  etl: '<path d="M3 6h7M3 12h4M3 18h7"/><path d="M14 6h7l-3-3M21 6l-3 3M14 18h7l-3-3M21 18l-3 3"/><path d="M10 6v12"/>',
+  reconcile: '<path d="M12 3v18M5 21h14"/><path d="M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/>',
+  migration: '<ellipse cx="9" cy="5" rx="6" ry="2.5"/><path d="M3 5v12c0 1.4 2.7 2.5 6 2.5M15 5v5"/><path d="M3 11c0 1.4 2.7 2.5 6 2.5"/><path d="M14 17h8M19 14l3 3-3 3"/>',
+  modelling: '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
+  auth: '<circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 21 2M17 6l3 3M14.5 8.5l2 2"/>',
+  protect: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
+  vuln: '<path d="M8 2l1.9 1.9M16 2l-1.9 1.9"/><path d="M9 7.1V6a3 3 0 0 1 6 0v1.1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6zM12 20v-9M6.5 13H3M21 13h-3.5M6 9 3 7M18 9l3-2M6 17l-3 2M18 17l3 2"/>',
+  vpn: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+};
+const LINE_ICON_FOR = {
+  'Testes unitários': 'unit', 'Unit testing': 'unit', 'Integração': 'integration', Integration: 'integration',
+  E2E: 'e2e', 'Regressão': 'regression', Regression: 'regression', API: 'api',
+  'Planos & casos de teste': 'testplan', 'Test plans & cases': 'testplan', Scrum: 'scrum', Kanban: 'kanban',
+  'LLMs & APIs de IA': 'sparkles', 'LLMs & AI APIs': 'sparkles',
+  'Sistemas inteligentes': 'brain', 'Intelligent systems': 'brain',
+  'Chatbots de atendimento': 'bot', 'Customer service chatbots': 'bot',
+  'IA via USSD': 'ussd', 'AI over USSD': 'ussd',
+  'RESTful APIs': 'rest', 'M-Pesa': 'wallet', 'e-Mola': 'wallet', mKesh: 'wallet',
+  'ERP Primavera': 'erp', 'SMS / USSD': 'sms', ETL: 'etl',
+  'Conciliação': 'reconcile', Reconciliation: 'reconcile',
+  'Migração de dados': 'migration', 'Data migration': 'migration',
+  'Modelagem de dados': 'modelling', 'Data modelling': 'modelling',
+  'Autenticação / Autorização': 'auth', 'Authentication / Authorisation': 'auth',
+  'Protecção de dados': 'protect', 'Data protection': 'protect',
+  'Gestão de vulnerabilidades': 'vuln', 'Vulnerability management': 'vuln',
+  'VPN IPsec / IKEv2': 'vpn',
+};
+
 function skillChip(item) {
   const label = tr(item);
   const ic = ICONS[label];
-  if (!ic) return `<li>${label}</li>`;
-  const icon = MONO_ICONS.has(ic)
-    ? `<span class="ic ic-mono" style="--ic:url(assets/icons/${ic}.svg)" aria-hidden="true"></span>`
-    : `<img class="ic" src="assets/icons/${ic}.svg" alt="" width="16" height="16" loading="lazy" />`;
-  return `<li class="has-ic">${icon}${label}</li>`;
+  let icon = '';
+  if (ic) {
+    icon = MONO_ICONS.has(ic)
+      ? `<span class="ic ic-mono" style="--ic:url(assets/icons/${ic}.svg)" aria-hidden="true"></span>`
+      : `<img class="ic" src="assets/icons/${ic}.svg" alt="" width="16" height="16" loading="lazy" />`;
+  } else if (LINE_ICON_FOR[label]) {
+    icon = `<svg class="ic ic-line" viewBox="0 0 24 24" aria-hidden="true">${LINE_ICONS[LINE_ICON_FOR[label]]}</svg>`;
+  }
+  return icon ? `<li class="has-ic">${icon}${label}</li>` : `<li>${label}</li>`;
 }
 
 // Textos da página em inglês (o português está no próprio index.html)
