@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Énio Marcos Massingue · Engenheiro de Software & QA</title>
+  <meta name="description" content="Engenheiro Informático especialista em desenvolvimento de software, CI/CD e QA. Mais de 5 anos a construir e manter em produção aplicações web, móveis e APIs em Moçambique — e-EDM, SolarEc (FUNAE), SIIP, Portal da Juventude e mais." />
+  <meta name="author" content="Énio Marcos Massingue" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Énio Marcos Massingue · Engenheiro de Software & QA" />
+  <meta property="og:description" content="Desenvolvimento, testes e CI/CD de sistemas críticos: energia, educação, governo, pagamentos e IA." />
+  <meta property="og:image" content="https://eniomarcosm.github.io/portfolio/assets/og.jpg" />
+  <meta property="og:url" content="https://eniomarcosm.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    // Aplica o tema e o idioma antes do primeiro paint para evitar flash
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = 'dark';
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        var l = q || localStorage.getItem('lang') || ((navigator.language || 'pt').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
+        document.documentElement.lang = l === 'en' ? 'en' : 'pt';
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Início">
+        <span class="brand-mark">ÉM</span>
+        <span class="brand-name">Énio Marcos</span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#experiencia" data-i18n="nav.exp">Experiência</a>
+        <a href="#projectos" data-i18n="nav.projects">Projectos</a>
+        <a href="#competencias" data-i18n="nav.skills">Competências</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn lang-btn" id="langToggle" aria-label="Mudar idioma / Change language" title="PT / EN">EN</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="dot"></span> <span data-i18n="hero.badge">Disponível para novos projectos</span></p>
+        <h1>Énio Marcos<br /><span class="grad">Massingue</span></h1>
+        <p class="role" data-i18n="hero.role">Engenheiro de Software · QA · CI/CD</p>
+        <p class="lead" data-i18n="hero.lead">
+          Construo, testo e mantenho em produção sistemas de criticidade elevada em Moçambique — do <strong>e-EDM</strong>,
+          da Electricidade de Moçambique, à venda de energia pré-paga do <strong>FUNAE</strong>.
+          Na <strong>UnISCED</strong> lidero as tecnologias educativas que suportam o ensino a distância de mais de 30 mil estudantes,
+          e desenvolvo ainda plataformas de governo, pagamentos e IA para o meio rural.
+        </p>
+        <div class="cta">
+          <a href="#projectos" class="btn btn-primary"><span data-i18n="hero.cta1">Ver projectos</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contacto" class="btn btn-ghost" data-i18n="hero.cta2">Falar comigo</a>
+        </div>
+        <ul class="socials">
+          <li><a href="https://linkedin.com/in/eniomarcosm" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a></li>
+          <li><a href="mailto:mr.eniomarcos@gmail.com" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a></li>
+          <li><a href="https://wa.me/258845694185" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="portrait">
+          <img class="photo-light" src="assets/enio.webp" alt="Retrato de Énio Marcos Massingue" width="640" height="640" />
+          <img class="photo-dark" src="assets/enio-dark.webp" alt="Retrato de Énio Marcos Massingue" width="640" height="640" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="container" aria-label="Números">
+      <div class="stats reveal">
+      <div class="stat"><span class="stat-num" data-count="5" data-suffix="+">5+</span><span class="stat-label" data-i18n="stats.1">anos em produção</span></div>
+      <div class="stat"><span class="stat-num" data-count="30" data-suffix="+">30+</span><span class="stat-label" data-i18n="stats.2">sistemas entregues</span></div>
+      <div class="stat"><span class="stat-num" data-count="100" data-suffix="k+">100k+</span><span class="stat-label" data-i18n="stats.3">utilizadores servidos</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-i18n="stats.4">sectores de actuação</span></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section container" id="sobre">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="about.kicker">01 — Sobre</p>
+        <h2 data-i18n="about.title">Software que facilita a vida — e que não falha em produção.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">
+            Sou Engenheiro Informático especialista em <strong>desenvolvimento de software, CI/CD e garantia de qualidade (QA)</strong>,
+            com mais de 5 anos no desenvolvimento, teste e manutenção em produção de aplicações web, móveis e APIs de criticidade elevada.
+          </p>
+          <p data-i18n="about.p2">
+            Planeio e executo testes manuais e automatizados (funcionais, regressão, integração e API), desenho casos de teste e
+            faço gestão de defeitos lado a lado com as equipas de desenvolvimento. Trabalho diariamente com web services REST/JSON,
+            integrações de pagamentos e de sistemas de terceiros, pipelines CI/CD e ambientes ágeis.
+          </p>
+          <p data-i18n="about.p3">
+            Rigoroso, analítico e atento ao detalhe — tanto a trabalhar de forma autónoma como em equipa.
+          </p>
+        </div>
+        <ul class="about-facts reveal">
+          <li><span data-i18n="about.f1">Localização</span><strong>Beira, Sofala · Moçambique</strong></li>
+          <li><span data-i18n="about.f2">Línguas</span><strong data-i18n="about.f2v">Português (nativo) · Inglês (fluente)</strong></li>
+          <li><span data-i18n="about.f3">Foco</span><strong data-i18n="about.f3v">Full-stack · QA · DevOps · IA aplicada</strong></li>
+          <li><span data-i18n="about.f4">Sectores</span><strong data-i18n="about.f4v">Energia, Educação, Governo, Fintech, Eventos, Agro</strong></li>
+        </ul>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <h3 data-i18n="pillar.p1h">Desenvolvimento</h3>
+          <p data-i18n="pillar.p1p">Web, mobile e APIs com Laravel, Vue/Quasar, Next.js, NestJS, React Native e Spring Boot.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3 data-i18n="pillar.p2h">Qualidade & Testes</h3>
+          <p data-i18n="pillar.p2p">Planos e casos de teste, automação com Jest e Playwright, testes de API com Postman, regressão contínua.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+          <h3 data-i18n="pillar.p3h">CI/CD & Infra</h3>
+          <p data-i18n="pillar.p3p">GitHub Actions, Jenkins, Docker, Kubernetes, Nginx/PM2 e observabilidade com Prometheus e Grafana.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+          <h3 data-i18n="pillar.p4h">Pagamentos & Integrações</h3>
+          <p data-i18n="pillar.p4p">M-Pesa, e-Mola, mKesh, ERP Primavera, SMS/USSD, ETL, conciliação e migração de dados.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section container" id="experiencia">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="exp.kicker">02 — Experiência</p>
+        <h2 data-i18n="exp.title">Onde tenho trabalhado.</h2>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- PROJECTOS -->
+    <section class="section container" id="projectos">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="proj.kicker">03 — Projectos</p>
+        <h2 data-i18n="proj.title">Sistemas em produção.</h2>
+        <p class="section-sub" data-i18n="proj.sub">Uma selecção do que desenvolvi, testei e mantenho — de apps com mais de 100 mil utilizadores a plataformas institucionais.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Filtrar projectos" id="filters"></div>
+
+      <article class="featured reveal" id="featured">
+        <div class="featured-media">
+          <div class="phone">
+            <img src="assets/shots/edm-mobile.webp" alt="Ecrã inicial da app e-EDM" loading="lazy" width="500" height="1000" />
+          </div>
+          <div class="browser browser-back">
+            <div class="browser-bar"><i></i><i></i><i></i><span>app.edm.co.mz</span></div>
+            <img src="assets/shots/edm.webp" alt="Versão web do e-EDM" loading="lazy" width="1200" height="750" />
+          </div>
+        </div>
+        <div class="featured-body">
+          <span class="tag tag-accent" data-i18n="edm.tag">Destaque · Energia</span>
+          <h3 data-i18n="edm.title">e-EDM — App oficial da Electricidade de Moçambique</h3>
+          <p data-i18n="edm.desc">
+            Aplicação web e móvel oficial da EDM, usada por mais de <strong>100 mil utilizadores</strong> para compra de Credelec,
+            reclamações, piquetes, avisos de cortes e contacto com o cliente. Desenvolvimento, testes de regressão, testes de API e
+            manutenção contínua em produção.
+          </p>
+          <ul class="chips" data-i18n="edm.chips"><li>Web + iOS + Android</li><li>APIs REST</li><li>Pagamentos móveis</li><li>QA / Regressão</li><li>CI/CD</li></ul>
+          <div class="store-links">
+            <a class="btn btn-sm btn-primary" href="https://app.edm.co.mz/" target="_blank" rel="noopener" data-i18n="edm.open">Abrir web app ↗</a>
+            <a class="btn btn-sm btn-ghost" href="https://play.google.com/store/apps/details?id=co.mz.edm.app" target="_blank" rel="noopener">Google Play</a>
+            <a class="btn btn-sm btn-ghost" href="https://apps.apple.com/mz/app/e-edm/id6754616410" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid" id="projectGrid"></div>
+      <p class="more-note reveal" data-i18n="proj.more">…e mais sistemas internos, APIs e integrações que não são públicos.</p>
+    </section>
+
+    <!-- COMPETÊNCIAS -->
+    <section class="section container" id="competencias">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="skills.kicker">04 — Competências</p>
+        <h2 data-i18n="skills.title">Ferramentas do dia-a-dia.</h2>
+      </div>
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section container" id="contacto">
+      <div class="contact reveal">
+        <p class="kicker" data-i18n="contact.kicker">05 — Contacto</p>
+        <h2 data-i18n="contact.title">Vamos construir algo <span class="grad">fiável</span>?</h2>
+        <p class="section-sub" data-i18n="contact.sub">Projectos, consultoria em QA/CI-CD ou uma conversa sobre o seu sistema — respondo rápido.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:mr.eniomarcos@gmail.com">
+            <span>E-mail</span><strong>mr.eniomarcos@gmail.com</strong>
+          </a>
+          <a class="contact-card" href="tel:+258845694185">
+            <span data-i18n="contact.phone">Telefone</span><strong>+258 84 569 4185</strong>
+          </a>
+          <a class="contact-card" href="https://wa.me/258825694185" target="_blank" rel="noopener">
+            <span>WhatsApp / Tel.</span><strong>+258 82 569 4185</strong>
+          </a>
+          <a class="contact-card" href="https://linkedin.com/in/eniomarcosm" target="_blank" rel="noopener">
+            <span>LinkedIn</span><strong>in/eniomarcosm</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Énio Marcos Massingue · <span data-i18n="footer.country">Moçambique</span></span>
+      <a href="#top" data-i18n="footer.top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
