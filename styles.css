@@ -201,12 +201,24 @@ strong { font-weight: 600; }
 .socials a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
 
 .hero-visual { position: relative; }
-.portrait {
-  position: relative; aspect-ratio: 1; border-radius: 32px; overflow: hidden;
-  background: var(--grad); padding: 3px; box-shadow: var(--shadow);
+.portrait { position: relative; aspect-ratio: 1; isolation: isolate; }
+/* Halo suave atrás da foto, em vez de moldura */
+.portrait::before {
+  content: ''; position: absolute; inset: 8% 6% -4%; z-index: -1; border-radius: 40%;
+  background: var(--grad); filter: blur(60px); opacity: .28;
 }
-.portrait img { width: 100%; height: 100%; object-fit: cover; border-radius: 29px; background: #fff; }
-.portrait .photo-dark { background: #000; }
+.portrait img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 28px;
+  border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.portrait .photo-light { background: #fff; }
+/* No modo escuro a foto (fundo preto) funde-se com a página */
+.portrait .photo-dark {
+  background: #000; border-color: transparent; box-shadow: none;
+  -webkit-mask-image: radial-gradient(120% 100% at 65% 40%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(120% 100% at 65% 40%, #000 55%, transparent 100%);
+}
+[data-theme='dark'] .portrait::before { opacity: .35; }
 [data-theme='dark'] .photo-light, [data-theme='light'] .photo-dark { display: none; }
 .float-card {
   position: absolute; display: flex; align-items: center; gap: 10px;
