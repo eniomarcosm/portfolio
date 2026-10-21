@@ -432,14 +432,6 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   root.dataset.theme = next;
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
-// Sem escolha manual, acompanha a hora do dia enquanto a página está aberta
-setInterval(() => {
-  let saved = null;
-  try { saved = localStorage.getItem('theme'); } catch (e) {}
-  if (saved) return;
-  const h = new Date().getHours();
-  root.dataset.theme = h >= 6 && h < 18 ? 'light' : 'dark';
-}, 60000);
 
 // ---------------------------------------------------------------------------
 // Menu mobile

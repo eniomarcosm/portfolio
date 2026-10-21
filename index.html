@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://eniomarcosm.github.io/portfolio/assets/og.jpg" />
   <meta property="og:url" content="https://eniomarcosm.github.io/portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0b0d12" />
+  <meta name="theme-color" content="#f7f7fb" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,10 +22,9 @@
     (function () {
       try {
         var t = localStorage.getItem('theme');
-        // Sem escolha guardada: claro das 06h às 18h, escuro no resto do dia (hora local do visitante)
-        if (!t) { var h = new Date().getHours(); t = h >= 6 && h < 18 ? 'light' : 'dark'; }
+        if (!t) t = 'light';
         document.documentElement.dataset.theme = t;
-      } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+      } catch (e) { document.documentElement.dataset.theme = 'light'; }
       try {
         var q = new URLSearchParams(location.search).get('lang');
         var l = q || localStorage.getItem('lang') || ((navigator.language || 'pt').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
