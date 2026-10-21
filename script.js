@@ -385,6 +385,7 @@ const EN = {
   'contact.title': 'Let’s build something <span class="grad">reliable</span>?',
   'contact.sub': 'Projects, QA/CI-CD consulting or a chat about your system — I reply quickly.',
   'contact.phone': 'Phone',
+  'contact.alt': 'Alternative',
   'footer.country': 'Mozambique',
   'footer.top': 'Back to top ↑',
 };

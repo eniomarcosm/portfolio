@@ -361,12 +361,30 @@ strong { font-weight: 600; }
 .contact .section-sub { max-width: 560px; margin: 14px auto 0; }
 .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 36px; text-align: left; }
 .contact-card {
-  display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border-radius: 14px;
-  border: 1px solid var(--line); background: var(--bg); transition: border-color .2s, transform .2s;
+  position: relative; display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 16px;
+  border: 1px solid var(--line); background: var(--bg); transition: border-color .2s, transform .2s, box-shadow .2s;
 }
-.contact-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-.contact-card span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+.contact-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
+.cc-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
 .contact-card strong { font-weight: 600; font-size: 15px; word-break: break-word; }
+.cc-icon {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; margin-bottom: 12px;
+  background: var(--chip); color: var(--chip-text);
+}
+.cc-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cc-icon svg.fill { fill: currentColor; stroke: none; }
+.cc-wa { background: rgba(37, 211, 102, .14); color: #1faa55; }
+.cc-in { background: rgba(10, 102, 194, .14); color: #0a66c2; }
+[data-theme='dark'] .cc-wa { color: #3ddc84; }
+[data-theme='dark'] .cc-in { color: #4ba3f5; }
+.cc-arrow {
+  position: absolute; top: 20px; right: 20px; width: 18px; height: 18px; fill: none; stroke: var(--muted);
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s, stroke .2s;
+}
+.contact-card:hover .cc-arrow { stroke: var(--accent); transform: translate(2px, -2px); }
+.cc-main::after { content: ''; position: absolute; inset: 0; border-radius: inherit; } /* toda a cartão liga para o número principal */
+.cc-alt { position: relative; z-index: 1; font-size: 13px; color: var(--muted); }
+.cc-alt:hover { color: var(--accent); }
 
 .footer { margin-top: 100px; border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; padding-top: 28px; padding-bottom: 28px; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
