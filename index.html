@@ -48,6 +48,7 @@
         <a href="#experiencia" data-i18n="nav.exp">Experiência</a>
         <a href="#projectos" data-i18n="nav.projects">Projectos</a>
         <a href="#competencias" data-i18n="nav.skills">Competências</a>
+        <a href="#formacao" data-i18n="nav.edu">Formação</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
       <div class="nav-actions">
@@ -83,7 +84,7 @@
           <a href="#contacto" class="btn btn-ghost" data-i18n="hero.cta2">Falar comigo</a>
         </div>
         <ul class="socials">
-          <li><a href="https://linkedin.com/in/eniomarcosm" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <li><a href="https://www.linkedin.com/in/eniomarcosm/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
           </a></li>
           <li><a href="mailto:mr.eniomarcos@gmail.com" aria-label="E-mail">
@@ -136,7 +137,7 @@
         </div>
         <ul class="about-facts reveal">
           <li><span data-i18n="about.f1">Localização</span><strong>Beira, Sofala · Moçambique</strong></li>
-          <li><span data-i18n="about.f2">Línguas</span><strong data-i18n="about.f2v">Português (nativo) · Inglês (fluente)</strong></li>
+          <li><span data-i18n="about.f2">Línguas</span><strong class="langs" data-i18n="about.f2v"><span><img class="flag" src="assets/flags/mz.svg" alt="" width="20" height="14" /> Português (nativo)</span><span><img class="flag" src="assets/flags/us.svg" alt="" width="20" height="14" /> Inglês (fluente)</span></strong></li>
           <li><span data-i18n="about.f3">Foco</span><strong data-i18n="about.f3v">Full-stack · QA · DevOps · IA aplicada</strong></li>
           <li><span data-i18n="about.f4">Sectores</span><strong data-i18n="about.f4v">Energia, Educação, Governo, Fintech, Eventos, Agro</strong></li>
         </ul>
@@ -180,7 +181,10 @@
       <div class="section-head reveal">
         <p class="kicker" data-i18n="proj.kicker">03 — Projectos</p>
         <h2 data-i18n="proj.title">Sistemas em produção.</h2>
-        <p class="section-sub" data-i18n="proj.sub">Uma selecção do que desenvolvi, testei e mantenho — de apps com mais de 100 mil utilizadores a plataformas institucionais.</p>
+        <p class="section-sub" data-i18n="proj.sub">Uma selecção do que desenvolvi, testei e mantenho — de apps com mais de 100 mil utilizadores a plataformas institucionais.
+          As apps móveis que publiquei (e-EDM, Fénix Delivery, Mahala, Freshcut, Gentleman's Barber Shop) estão na
+          <a href="https://play.google.com/store/apps/dev?id=6170142633097762997" target="_blank" rel="noopener">Google Play ↗</a> e na
+          <a href="https://apps.apple.com/ci/developer/mach-digital/id1829310148" target="_blank" rel="noopener">App Store ↗</a>.</p>
       </div>
 
       <div class="filters reveal" role="tablist" aria-label="Filtrar projectos" id="filters"></div>
@@ -225,10 +229,37 @@
       <div class="skills" id="skills"></div>
     </section>
 
+    <!-- FORMAÇÃO -->
+    <section class="section container" id="formacao">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="edu.kicker">05 — Formação</p>
+        <h2 data-i18n="edu.title">Base académica e certificações.</h2>
+      </div>
+      <div class="edu-grid">
+        <article class="edu-card edu-degree reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg></div>
+          <span class="edu-period">2018 — 2022</span>
+          <h3 data-i18n="edu.degree">Licenciatura em Engenharia Informática</h3>
+          <p class="edu-org">Universidade Zambeze · Beira, Moçambique</p>
+          <p class="edu-note" data-i18n="edu.note">Durante o curso integrei a equipa de desenvolvimento da própria universidade, onde construí o Sistema de Gestão Académica em PHP/Laravel e a plataforma de ensino a distância em Moodle.</p>
+        </article>
+        <article class="edu-card reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg></div>
+          <h3 data-i18n="edu.certs">Certificações</h3>
+          <ul class="cert-list">
+            <li><span class="cert-name" data-i18n="cert.c1">CCNA R&S — Introduction to Networks</span><span class="cert-org">Cisco Networking Academy</span></li>
+            <li><span class="cert-name" data-i18n="cert.c2">PCAP — Programming Essentials in Python</span><span class="cert-org">Cisco Networking Academy</span></li>
+            <li><span class="cert-name" data-i18n="cert.c3">Introdução à Cibersegurança</span><span class="cert-org">Cisco Networking Academy</span></li>
+            <li><span class="cert-name" data-i18n="cert.c4">Networking Essentials</span><span class="cert-org">Cisco Networking Academy</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- CONTACTO -->
     <section class="section container" id="contacto">
       <div class="contact reveal">
-        <p class="kicker" data-i18n="contact.kicker">05 — Contacto</p>
+        <p class="kicker" data-i18n="contact.kicker">06 — Contacto</p>
         <h2 data-i18n="contact.title">Vamos construir algo <span class="grad">fiável</span>?</h2>
         <p class="section-sub" data-i18n="contact.sub">Projectos, consultoria em QA/CI-CD ou uma conversa sobre o seu sistema — respondo rápido.</p>
         <div class="contact-grid">
@@ -249,7 +280,7 @@
             <a class="cc-alt" href="tel:+258825694185"><span data-i18n="contact.alt">Alternativo</span>: +258 82 569 4185</a>
             <svg class="cc-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </div>
-          <a class="contact-card" href="https://linkedin.com/in/eniomarcosm" target="_blank" rel="noopener">
+          <a class="contact-card" href="https://www.linkedin.com/in/eniomarcosm/" target="_blank" rel="noopener">
             <span class="cc-icon cc-in"><svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
             <span class="cc-label">LinkedIn</span><strong>in/eniomarcosm</strong>
             <svg class="cc-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
@@ -262,9 +293,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Énio Marcos Massingue · <span data-i18n="footer.country">Moçambique</span></span>
-      <a href="#top" data-i18n="footer.top">Voltar ao topo ↑</a>
     </div>
   </footer>
+
+  <a href="#top" class="to-top" id="toTop" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
 
   <script src="script.js" defer></script>
 </body>

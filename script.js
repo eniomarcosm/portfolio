@@ -11,19 +11,25 @@ const CATEGORIES = {
   ia: { pt: 'IA & Agro', en: 'AI & Agri' },
   mobile: 'Mobile',
   erp: { pt: 'ERP & Gestão', en: 'ERP & Management' },
+  saas: 'SaaS',
 };
 
 const PROJECTS = [
   {
     title: 'SolarEc — FUNAE, F.P.',
     desc: {
-      pt: 'Sistema de venda de energia pré-paga e gestão de mini-redes solares: vendas e emissão de tokens STS, rede de contadores e caixas, segurança RBAC.',
-      en: 'Prepaid energy sales and solar mini-grid management system: sales and STS token issuance, meter and cashier network, RBAC security.',
+      pt: 'Venda de energia pré-paga e gestão de mini-redes solares do Fundo de Energia: emissão de tokens STS de 20 dígitos em tempo real, rede de contadores e caixas, segurança RBAC. Inclui a app do cliente para comprar energia por M-Pesa e e-Mola e reclamar por texto, voz ou foto — sem criar conta.',
+      en: 'Prepaid energy sales and solar mini-grid management for the Energy Fund: real-time 20-digit STS token issuance, meter and cashier network, RBAC security. Includes the customer app to buy energy via M-Pesa and e-Mola and file complaints by text, voice or photo — no account needed.',
     },
     img: 'solarec.webp',
-    url: 'https://teste-solarec.funaeprepago.co.mz/auth/login',
-    cats: ['energia', 'fintech'],
-    tags: ['Next.js', { pt: 'Energia pré-paga', en: 'Prepaid energy' }, 'STS', 'RBAC'],
+    url: 'https://solarec.funae.co.mz/',
+    app: { img: 'solarec-app.webp', url: 'https://app.funae.co.mz/' },
+    links: [
+      { label: { pt: 'Back-office ↗', en: 'Back-office ↗' }, url: 'https://solarec.funae.co.mz/' },
+      { label: { pt: 'App do cliente ↗', en: 'Customer app ↗' }, url: 'https://app.funae.co.mz/' },
+    ],
+    cats: ['energia', 'fintech', 'mobile'],
+    tags: ['Next.js', { pt: 'Energia pré-paga', en: 'Prepaid energy' }, 'STS', 'RBAC', { pt: 'App PWA', en: 'PWA app' }],
   },
   {
     title: { pt: 'AIISMG — IA para o pequeno agricultor', en: 'AIISMG — AI for smallholder farmers' },
@@ -55,11 +61,57 @@ const PROJECTS = [
     },
     img: 'fenix.webp',
     url: 'https://fenixdelivery.co.mz/',
+    app: { img: 'fenix-app.webp', url: 'https://apps.apple.com/mz/app/f%C3%A9nix-delivery/id6751499374' },
     cats: ['mobile'],
     tags: ['iOS', 'Android', 'Delivery'],
     stores: {
       play: 'https://play.google.com/store/apps/details?id=com.eniomarcosm.fenixdelivery',
       apple: 'https://apps.apple.com/mz/app/f%C3%A9nix-delivery/id6751499374',
+    },
+  },
+  {
+    title: { pt: 'Mahala — Loja Online', en: 'Mahala — Online Store' },
+    desc: {
+      pt: 'App de compras online em Moçambique: catálogo das melhores marcas, preços em MZN e USD, entregas para todo o país, reembolso garantido, pagamento seguro e suporte 24/7.',
+      en: 'Online shopping app for Mozambique: a catalogue of top brands, MZN and USD pricing, nationwide delivery, guaranteed refunds, secure payment and 24/7 support.',
+    },
+    phones: ['mahala-1.webp', 'mahala-2.webp'],
+    url: 'https://apps.apple.com/mz/app/mahala/id6749211168',
+    cats: ['mobile'],
+    tags: ['iOS', 'Android', 'E-commerce', { pt: 'Entregas', en: 'Delivery' }],
+    stores: {
+      play: 'https://play.google.com/store/apps/details?id=com.machgroup.mahalaapp',
+      apple: 'https://apps.apple.com/mz/app/mahala/id6749211168',
+    },
+  },
+  {
+    title: "Gentleman's Barber Shop",
+    desc: {
+      pt: 'App de marcações da barbearia: escolha do serviço, data e horário disponível, pagamento por M-Pesa ou e-Mola e histórico de visitas — controlo total dos agendamentos de forma simples e elegante.',
+      en: 'Barbershop booking app: choose a service, date and available time slot, pay with M-Pesa or e-Mola and see your visit history — full control of appointments, simply and elegantly.',
+    },
+    phones: ['gentlemans-1.webp', 'gentlemans-2.webp'],
+    url: 'https://apps.apple.com/mz/app/gentlemans-barber-shop/id6761983515',
+    cats: ['mobile', 'fintech'],
+    tags: ['iOS', 'Android', { pt: 'Marcações', en: 'Bookings' }, 'M-Pesa', 'e-Mola'],
+    stores: {
+      play: 'https://play.google.com/store/apps/details?id=com.gentlemans.barber',
+      apple: 'https://apps.apple.com/mz/app/gentlemans-barber-shop/id6761983515',
+    },
+  },
+  {
+    title: 'Freshcut Barbershop',
+    desc: {
+      pt: 'App de marcações rápidas para barbearia: serviços de corte, barba e cuidados, escolha da unidade no mapa e do horário, programa de fidelidade com pontos e pacotes mensais por assinatura.',
+      en: 'Quick-booking barbershop app: haircut, beard and grooming services, branch picker on a map and time slots, a points-based loyalty programme and monthly subscription packages.',
+    },
+    phones: ['freshcut-1.webp', 'freshcut-2.webp'],
+    url: 'https://apps.apple.com/mz/app/freshcut-barbershop-moz/id6802670698',
+    cats: ['mobile'],
+    tags: ['iOS', 'Android', { pt: 'Marcações', en: 'Bookings' }, { pt: 'Fidelidade', en: 'Loyalty' }, { pt: 'Assinaturas', en: 'Subscriptions' }],
+    stores: {
+      play: 'https://play.google.com/store/apps/details?id=com.freshcuts.barber',
+      apple: 'https://apps.apple.com/mz/app/freshcut-barbershop-moz/id6802670698',
     },
   },
   {
@@ -74,15 +126,37 @@ const PROJECTS = [
     tags: [{ pt: 'Gestão académica', en: 'Academic management' }, 'Microsoft login', { pt: 'Finanças', en: 'Finance' }],
   },
   {
-    title: 'SIGA — Colégio Liduva',
+    title: { pt: 'SIGA — Sistema de Gestão Escolar', en: 'SIGA — School Management System' },
     desc: {
-      pt: 'Gestão académica e financeira: alunos, encarregados, matrículas, propinas, pagamentos e avaliação num só lugar.',
-      en: 'Academic and financial management: students, guardians, enrolment, tuition, payments and assessment in one place.',
+      pt: 'Gestão académica e financeira para escolas: matrículas, propinas, avaliação e comunicação com os encarregados — tudo num só lugar. Perfis e permissões por colaborador; faturas, recibos e reconciliação bancária. Exemplo em produção: Colégio Liduva.',
+      en: 'Academic and financial management for schools: enrolment, tuition, assessment and communication with guardians — all in one place. Per-staff roles and permissions; invoices, receipts and bank reconciliation. Live example: Colégio Liduva.',
     },
     img: 'siga.webp',
     url: 'https://siga.colegioliduva.edu.mz/',
     cats: ['educacao'],
-    tags: [{ pt: 'Gestão escolar', en: 'School management' }, { pt: 'Propinas', en: 'Tuition' }, { pt: 'Avaliação', en: 'Assessment' }],
+    tags: [{ pt: 'Gestão escolar', en: 'School management' }, { pt: 'Propinas', en: 'Tuition' }, { pt: 'Avaliação', en: 'Assessment' }, 'RBAC'],
+  },
+  {
+    title: { pt: 'Biblioteca Virtual — UnISCED', en: 'Virtual Library — UnISCED' },
+    desc: {
+      pt: 'Repositório digital da Universidade Aberta ISCED: livros de referência, materiais de estudo, artigos e infográficos organizados por comunidades e colecções, com pesquisa por autor, assunto e data — acesso 100% online, 24/7.',
+      en: 'Digital repository of the Open University ISCED: reference books, study materials, articles and infographics organised by communities and collections, searchable by author, subject and date — 100% online, 24/7.',
+    },
+    img: 'biblioteca.webp',
+    url: 'https://biblioteca.unisced.edu.mz/',
+    cats: ['educacao'],
+    tags: ['DSpace', 'Angular', { pt: 'Repositório digital', en: 'Digital repository' }, { pt: 'Ensino a distância', en: 'Distance learning' }],
+  },
+  {
+    title: { pt: 'Convida — convites e listas de presentes', en: 'Convida — invitations & gift registries' },
+    desc: {
+      pt: 'SaaS de convites online para casamentos, aniversários e chás: página personalizada com fotos, música e contagem decrescente, confirmação de presença, lista de presentes sem repetições, contribuições por M-Pesa, e-Mola e mKesh e links pessoais partilhados por WhatsApp.',
+      en: 'Online invitation SaaS for weddings, birthdays and showers: a custom page with photos, music and countdown, RSVP, a no-duplicates gift registry, M-Pesa, e-Mola and mKesh contributions and personal links shared via WhatsApp.',
+    },
+    img: 'convida.webp',
+    url: 'https://convida.kokwana.cloud/',
+    cats: ['saas', 'eventos', 'fintech'],
+    tags: ['SaaS', 'RSVP', { pt: 'Lista de presentes', en: 'Gift registry' }, 'WhatsApp', 'M-Pesa'],
   },
   {
     title: { pt: 'Portal da Juventude — MJD', en: 'Youth Portal — MJD' },
@@ -338,6 +412,7 @@ const EN = {
   'nav.exp': 'Experience',
   'nav.projects': 'Projects',
   'nav.skills': 'Skills',
+  'nav.edu': 'Education',
   'nav.contact': 'Contact',
   'hero.badge': 'Available for new projects',
   'hero.role': 'Software Engineer · QA · CI/CD',
@@ -355,7 +430,7 @@ const EN = {
   'about.p3': 'Rigorous, analytical and detail-oriented — whether working independently or as part of a team.',
   'about.f1': 'Location',
   'about.f2': 'Languages',
-  'about.f2v': 'Portuguese (native) · English (fluent)',
+  'about.f2v': '<span><img class="flag" src="assets/flags/mz.svg" alt="" width="20" height="14" /> Portuguese (native)</span><span><img class="flag" src="assets/flags/us.svg" alt="" width="20" height="14" /> English (fluent)</span>',
   'about.f3': 'Focus',
   'about.f3v': 'Full-stack · QA · DevOps · Applied AI',
   'about.f4': 'Sectors',
@@ -370,7 +445,7 @@ const EN = {
   'pillar.p4p': 'M-Pesa, e-Mola, mKesh, Primavera ERP, SMS/USSD, ETL, reconciliation and data migration.',
   'proj.kicker': '03 — Projects',
   'proj.title': 'Systems in production.',
-  'proj.sub': 'A selection of what I’ve built, tested and maintain — from apps with over 100,000 users to institutional platforms.',
+  'proj.sub': 'A selection of what I’ve built, tested and maintain — from apps with over 100,000 users to institutional platforms. The mobile apps I’ve published (e-EDM, Fénix Delivery, Mahala, Freshcut, Gentleman’s Barber Shop) are on <a href="https://play.google.com/store/apps/dev?id=6170142633097762997" target="_blank" rel="noopener">Google Play ↗</a> and the <a href="https://apps.apple.com/ci/developer/mach-digital/id1829310148" target="_blank" rel="noopener">App Store ↗</a>.',
   'edm.tag': 'Featured · Energy',
   'edm.title': 'e-EDM — Official app of Electricidade de Moçambique',
   'edm.desc': 'The official EDM web and mobile app, used by over <strong>100,000 users</strong> to buy Credelec, file complaints, find service teams, get outage notices and contact customer care. Development, regression testing, API testing and ongoing production maintenance.',
@@ -379,7 +454,13 @@ const EN = {
   'proj.more': '…plus more internal systems, APIs and integrations that aren’t public.',
   'skills.kicker': '04 — Skills',
   'skills.title': 'Everyday toolkit.',
-  'contact.kicker': '05 — Contact',
+  'contact.kicker': '06 — Contact',
+  'edu.kicker': '05 — Education',
+  'edu.title': 'Academic background and certifications.',
+  'edu.degree': 'BSc in Computer Engineering',
+  'edu.note': 'During my degree I joined the university’s own development team, where I built the Academic Management System in PHP/Laravel and the Moodle distance-learning platform.',
+  'edu.certs': 'Certifications',
+  'cert.c3': 'Introduction to Cybersecurity',
   'exp.kicker': '02 — Experience',
   'exp.title': 'Where I’ve been working.',
   'contact.title': 'Let’s build something <span class="grad">reliable</span>?',
@@ -387,12 +468,11 @@ const EN = {
   'contact.phone': 'Phone',
   'contact.alt': 'Alternative',
   'footer.country': 'Mozambique',
-  'footer.top': 'Back to top ↑',
 };
 
 const UI = {
-  pt: { now: 'Actual', all: 'Todos', open: 'Abrir', shot: 'Captura de ecrã de', title: 'Énio Marcos Massingue · Engenheiro de Software & QA' },
-  en: { now: 'Current', all: 'All', open: 'Open', shot: 'Screenshot of', title: 'Énio Marcos Massingue · Software Engineer & QA' },
+  pt: { now: 'Actual', all: 'Todos', open: 'Abrir', shot: 'Captura de ecrã de', top: 'Voltar ao topo', title: 'Énio Marcos Massingue · Engenheiro de Software & QA' },
+  en: { now: 'Current', all: 'All', open: 'Open', shot: 'Screenshot of', top: 'Back to top', title: 'Énio Marcos Massingue · Software Engineer & QA' },
 };
 
 // ---------------------------------------------------------------------------
@@ -412,6 +492,8 @@ function applyStaticText() {
     el.innerHTML = lang === 'en' && EN[key] ? EN[key] : el.dataset.pt;
   });
   document.title = UI[lang].title;
+  toTop.setAttribute('aria-label', UI[lang].top);
+  toTop.title = UI[lang].top;
   langBtn.textContent = lang === 'en' ? 'PT' : 'EN';
   langBtn.setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
 }
@@ -445,7 +527,21 @@ menuBtn.addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach((a) =>
   a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); })
 );
-addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), { passive: true });
+const toTop = document.getElementById('toTop');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 8);
+  toTop.classList.toggle('show', scrollY > innerHeight * 0.8);
+}, { passive: true });
+
+// "#top" é o próprio header sticky: o browser acha que já está visível e não faz scroll
+document.querySelectorAll('a[href="#top"]').forEach((a) =>
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    nav.classList.remove('open');
+    scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    history.replaceState(null, '', location.pathname + location.search);
+  })
+);
 
 // ---------------------------------------------------------------------------
 // Projectos + filtros
@@ -458,18 +554,33 @@ let activeFilter = 'all';
 
 function card(p) {
   const title = tr(p.title);
-  const stores = p.stores
-    ? `<div class="card-stores">
-        <a href="${p.stores.apple}" target="_blank" rel="noopener">App Store</a>
-        <a href="${p.stores.play}" target="_blank" rel="noopener">Google Play</a>
-      </div>`
+  const links = [
+    ...(p.stores ? [{ label: 'App Store', url: p.stores.apple }, { label: 'Google Play', url: p.stores.play }] : []),
+    ...(p.links || []),
+  ];
+  const stores = links.length
+    ? `<div class="card-stores">${links.map((l) => `<a href="${l.url}" target="_blank" rel="noopener">${tr(l.label)}</a>`).join('')}</div>`
+    : '';
+  // Projectos com app móvel mostram o ecrã do telemóvel sobreposto à captura web
+  const phone = p.app
+    ? `<a class="phone card-phone" href="${p.app.url}" target="_blank" rel="noopener" aria-label="${UI[lang].open} ${hostOf(p.app.url)}">
+        <img src="assets/shots/${p.app.img}" alt="${UI[lang].shot} ${hostOf(p.app.url)}" loading="lazy" width="500" height="1000" />
+      </a>`
     : '';
   return `
     <article class="card reveal in" data-cats="${p.cats.join(' ')}">
-      <a class="browser" href="${p.url}" target="_blank" rel="noopener" aria-label="${UI[lang].open} ${title}">
-        <div class="browser-bar"><i></i><i></i><i></i><span>${hostOf(p.url)}</span></div>
-        <img src="assets/shots/${p.img}" alt="${UI[lang].shot} ${title}" loading="lazy" width="1200" height="750" />
-      </a>
+      <div class="card-media">
+        ${p.phones
+          ? // Apps só móveis: dois ecrãs lado a lado em vez da janela do browser
+            `<a class="app-stage" href="${p.url}" target="_blank" rel="noopener" aria-label="${UI[lang].open} ${title}">
+              ${p.phones.map((img) => `<span class="phone"><img src="assets/shots/${img}" alt="${UI[lang].shot} ${title}" loading="lazy" width="300" height="650" /></span>`).join('')}
+            </a>`
+          : `<a class="browser" href="${p.url}" target="_blank" rel="noopener" aria-label="${UI[lang].open} ${title}">
+              <div class="browser-bar"><i></i><i></i><i></i><span>${hostOf(p.url)}</span></div>
+              <img src="assets/shots/${p.img}" alt="${UI[lang].shot} ${title}" loading="lazy" width="1200" height="750" />
+            </a>`}
+        ${phone}
+      </div>
       <div class="card-body">
         <div class="card-cats">${p.cats.map((c) => `<span class="tag">${tr(CATEGORIES[c])}</span>`).join('')}</div>
         <h3><a href="${p.url}" target="_blank" rel="noopener">${title} <span aria-hidden="true">↗</span></a></h3>
