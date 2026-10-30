@@ -441,7 +441,7 @@ const EN = {
   'nav.contact': 'Contact',
   'hero.badge': 'Available for new projects',
   'hero.role': 'Software Engineer · QA · CI/CD',
-  'hero.lead': 'I build, test and run scalable, mission-critical systems in production in Mozambique, used by more than <strong>100,000 users</strong> — from <strong>e-EDM</strong> (Electricidade de Moçambique) to <strong>FUNAE</strong>’s prepaid energy sales, along with education, government, payments and AI platforms for rural communities.',
+  'hero.lead': 'I build, test and run scalable, mission-critical systems in production in Mozambique, used by more than <strong>100,000 users</strong> — from <strong>e-EDM</strong> (Electricidade de Moçambique) to <strong>FUNAE</strong>’s prepaid energy sales and <strong>UnISCED</strong>’s distance-learning platforms, along with government, payments and AI solutions for rural communities.',
   'hero.cta1': 'View projects',
   'hero.cta2': 'Get in touch',
   'stats.1': 'years in production',
