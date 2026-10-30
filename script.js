@@ -353,7 +353,7 @@ const EXPERIENCE = [
         points: [
           { pt: 'Sistema de Gestão Académica em PHP/Laravel e plataforma de ensino a distância (Moodle), optimizando processos académicos e a gestão de emolumentos.', en: 'Academic Management System in PHP/Laravel and a Moodle distance-learning platform, streamlining academic processes and fee management.' },
         ],
-        tags: ['PHP / Laravel', 'Moodle'],
+        tags: ['PHP / Laravel', 'Moodle', 'MySQL'],
       },
     ],
   },
