@@ -279,7 +279,7 @@ const EXPERIENCE = [
       },
       {
         period: '2023 — 2024',
-        role: { pt: 'Programador de Sistemas', en: 'Software Developer' },
+        role: { pt: 'Programador de Software', en: 'Software Developer' },
         points: [
           { pt: 'Desenvolvimento de sistemas académicos, plataformas de ensino a distância e apps móveis com Node.js, Next.js/React e React Native, integrados por APIs REST/JSON.', en: 'Built academic systems, distance-learning platforms and mobile apps with Node.js, Next.js/React and React Native, connected through REST/JSON APIs.' },
           { pt: 'Testes funcionais, de integração e de API; reprodução, documentação e validação de defeitos com a equipa.', en: 'Functional, integration and API testing; reproducing, documenting and verifying defects with the team.' },
