@@ -257,80 +257,105 @@ const SKILLS = [
   },
 ];
 
+// Experiência agrupada por organização; cada uma pode ter vários cargos (mais recente primeiro).
+// O período da organização é calculado a partir dos cargos.
 const EXPERIENCE = [
   {
-    period: { pt: '2024 — Presente', en: '2024 — Present' },
-    role: { pt: 'Chefe da Secção de Tecnologias Educativas', en: 'Head of Educational Technology' },
     org: 'Universidade Aberta ISCED (UnISCED)',
+    url: 'https://unisced.edu.mz/',
     place: 'Beira',
-    current: true,
-    points: [
-      { pt: 'Liderança técnica da secção: definição de soluções, revisão de código, mentoria de programadores e transferência de conhecimento.', en: 'Technical lead of the section: solution design, code review, developer mentoring and knowledge transfer.' },
-      { pt: 'Gestão e evolução de sistemas críticos usados por mais de 30.000 estudantes em ensino a distância (EaD).', en: 'Running and evolving critical systems used by more than 30,000 distance-learning students.' },
-      { pt: 'Administração da infra-estrutura de produção (Linux, Docker), com observabilidade, backups automatizados e planos de continuidade.', en: 'Production infrastructure administration (Linux, Docker) with observability, automated backups and continuity plans.' },
-      { pt: 'Conformidade com normas de segurança, privacidade e protecção de dados; boas práticas de QA e testes de regressão.', en: 'Compliance with security, privacy and data-protection standards; QA best practices and regression testing.' },
+    roles: [
+      {
+        period: { pt: '2024 — Presente', en: '2024 — Present' },
+        role: { pt: 'Chefe da Secção de Tecnologias Educativas', en: 'Head of Educational Technology' },
+        current: true,
+        points: [
+          { pt: 'Liderança técnica da secção: definição de soluções, revisão de código, mentoria de programadores e transferência de conhecimento.', en: 'Technical lead of the section: solution design, code review, developer mentoring and knowledge transfer.' },
+          { pt: 'Gestão e evolução de sistemas críticos usados por mais de 30.000 estudantes em ensino a distância (EaD).', en: 'Running and evolving critical systems used by more than 30,000 distance-learning students.' },
+          { pt: 'Administração da infra-estrutura de produção (Linux, Docker), com observabilidade, backups automatizados e planos de continuidade.', en: 'Production infrastructure administration (Linux, Docker) with observability, automated backups and continuity plans.' },
+          { pt: 'Conformidade com normas de segurança, privacidade e protecção de dados; boas práticas de QA e testes de regressão.', en: 'Compliance with security, privacy and data-protection standards; QA best practices and regression testing.' },
+        ],
+        tags: ['EaD / LMS', 'Linux', 'Docker', 'QA'],
+      },
+      {
+        period: '2023 — 2024',
+        role: { pt: 'Programador de Sistemas', en: 'Software Developer' },
+        points: [
+          { pt: 'Desenvolvimento de sistemas académicos e plataformas EaD com APIs REST/JSON.', en: 'Built academic systems and distance-learning platforms with REST/JSON APIs.' },
+          { pt: 'Testes funcionais, de integração e de API (Postman); reprodução, documentação e validação de defeitos.', en: 'Functional, integration and API testing (Postman); reproducing, documenting and verifying defects.' },
+        ],
+        tags: ['REST APIs', 'Postman', 'EaD'],
+      },
     ],
-    tags: ['EaD / LMS', 'Linux', 'Docker', 'QA'],
   },
   {
-    period: { pt: '2025 — Presente', en: '2025 — Present' },
-    role: { pt: 'Consultor Sénior em Desenvolvimento de Software', en: 'Senior Software Development Consultant' },
     org: 'Vitae Consultoria e Serviços (Vitae ERP)',
+    url: 'https://vitae-erp.co.mz/',
     place: 'Maputo',
-    current: true,
-    points: [
-      { pt: 'Aplicações web, móveis e PWA de alta utilização (Next.js, NestJS, React Native) com pagamentos por carteiras móveis.', en: 'High-traffic web, mobile and PWA apps (Next.js, NestJS, React Native) with mobile-wallet payments.' },
-      { pt: 'Integração de APIs e serviços de terceiros, incluindo a emissão de tokens de energia pré-paga na plataforma SolarEc do FUNAE.', en: 'API and third-party integrations, including prepaid energy token issuance on FUNAE’s SolarEc platform.' },
-      { pt: 'Testes de APIs e integrações em sandbox: callbacks, cenários de erro e conciliação.', en: 'Sandbox testing of APIs and integrations: callbacks, error scenarios and reconciliation.' },
-      { pt: 'Implantação e operação em produção (SMS, seguros, bilhética, sistemas municipais) com CI/CD e monitorização.', en: 'Deploying and operating production platforms (SMS, insurance, ticketing, municipal systems) with CI/CD and monitoring.' },
+    roles: [
+      {
+        period: { pt: '2025 — Presente', en: '2025 — Present' },
+        role: { pt: 'Consultor Sénior em Desenvolvimento de Software', en: 'Senior Software Development Consultant' },
+        current: true,
+        points: [
+          { pt: 'Aplicações web, móveis e PWA de alta utilização (Next.js, NestJS, React Native) com pagamentos por carteiras móveis.', en: 'High-traffic web, mobile and PWA apps (Next.js, NestJS, React Native) with mobile-wallet payments.' },
+          { pt: 'Integração de APIs e serviços de terceiros, incluindo a emissão de tokens de energia pré-paga na plataforma SolarEc do FUNAE.', en: 'API and third-party integrations, including prepaid energy token issuance on FUNAE’s SolarEc platform.' },
+          { pt: 'Testes de APIs e integrações em sandbox: callbacks, cenários de erro e conciliação.', en: 'Sandbox testing of APIs and integrations: callbacks, error scenarios and reconciliation.' },
+          { pt: 'Implantação e operação em produção (SMS, seguros, bilhética, sistemas municipais) com CI/CD e monitorização.', en: 'Deploying and operating production platforms (SMS, insurance, ticketing, municipal systems) with CI/CD and monitoring.' },
+        ],
+        tags: ['Next.js', 'NestJS', 'React Native', 'M-Pesa / e-Mola', 'CI/CD'],
+      },
     ],
-    tags: ['Next.js', 'NestJS', 'React Native', 'M-Pesa / e-Mola', 'CI/CD'],
   },
   {
-    period: '2021 — 2025',
-    role: { pt: 'Consultor Sénior em Desenvolvimento de Software', en: 'Senior Software Development Consultant' },
     org: 'MACH DIGITAL',
+    url: 'https://mach.co.mz/',
     place: 'Maputo',
-    points: [
-      { pt: 'Bots de atendimento ao cliente com LLMs (Node.js, Python, n8n) e automação de processos.', en: 'Customer-service bots powered by LLMs (Node.js, Python, n8n) and process automation.' },
-      { pt: 'Backend em NestJS e Spring Boot; pagamentos móveis em sistemas de venda de serviços e entregas com georreferenciamento.', en: 'NestJS and Spring Boot backends; mobile payments for service sales and geo-referenced delivery systems.' },
-      { pt: 'Soluções USSD com IA aplicada para zonas rurais com conectividade limitada.', en: 'AI-powered USSD solutions for rural areas with limited connectivity.' },
-      { pt: 'Equipas ágeis (Scrum/Kanban) com revisões de código e testes automatizados em pipelines GitHub Actions.', en: 'Agile teams (Scrum/Kanban) with code reviews and automated tests in GitHub Actions pipelines.' },
+    roles: [
+      {
+        period: '2021 — 2025',
+        role: { pt: 'Consultor Sénior em Desenvolvimento de Software', en: 'Senior Software Development Consultant' },
+        points: [
+          { pt: 'Bots de atendimento ao cliente com LLMs (Node.js, Python, n8n) e automação de processos.', en: 'Customer-service bots powered by LLMs (Node.js, Python, n8n) and process automation.' },
+          { pt: 'Backend em NestJS e Spring Boot; pagamentos móveis em sistemas de venda de serviços e entregas com georreferenciamento.', en: 'NestJS and Spring Boot backends; mobile payments for service sales and geo-referenced delivery systems.' },
+          { pt: 'Soluções USSD com IA aplicada para zonas rurais com conectividade limitada.', en: 'AI-powered USSD solutions for rural areas with limited connectivity.' },
+          { pt: 'Equipas ágeis (Scrum/Kanban) com revisões de código e testes automatizados em pipelines GitHub Actions.', en: 'Agile teams (Scrum/Kanban) with code reviews and automated tests in GitHub Actions pipelines.' },
+        ],
+        tags: ['LLMs', 'n8n', 'NestJS', 'Spring Boot', 'USSD'],
+      },
     ],
-    tags: ['LLMs', 'n8n', 'NestJS', 'Spring Boot', 'USSD'],
   },
   {
-    period: '2023 — 2024',
-    role: { pt: 'Programador de Sistemas', en: 'Systems Developer' },
-    org: 'Universidade Aberta ISCED (UnISCED)',
-    place: 'Beira',
-    points: [
-      { pt: 'Desenvolvimento de sistemas académicos e plataformas EaD com APIs REST/JSON.', en: 'Built academic systems and distance-learning platforms with REST/JSON APIs.' },
-      { pt: 'Testes funcionais, de integração e de API (Postman); reprodução, documentação e validação de defeitos.', en: 'Functional, integration and API testing (Postman); reproducing, documenting and verifying defects.' },
-    ],
-    tags: ['REST APIs', 'Postman', 'EaD'],
-  },
-  {
-    period: '2022 — 2024',
-    role: { pt: 'Técnico Informático e Programador de Software', en: 'IT Technician & Software Developer' },
     org: 'Universidade Jean Piaget de Moçambique',
+    url: 'https://unipiaget.ac.mz/',
     place: 'Beira',
-    points: [
-      { pt: 'APIs RESTful e sistema de gestão financeira e académica da universidade com Next.js, NestJS e Python.', en: 'RESTful APIs and the university’s financial and academic management system with Next.js, NestJS and Python.' },
-      { pt: 'Integração com o ERP Primavera (módulos académicos, financeiros e administrativos), ETL e migração de dados.', en: 'Primavera ERP integration (academic, finance and admin modules), ETL and data migration.' },
-      { pt: 'Gestão de redes, servidores e monitorização contínua.', en: 'Network and server management with continuous monitoring.' },
+    roles: [
+      {
+        period: '2022 — 2024',
+        role: { pt: 'Técnico Informático e Programador de Software', en: 'IT Technician & Software Developer' },
+        points: [
+          { pt: 'APIs RESTful e sistema de gestão financeira e académica da universidade com Next.js, NestJS e Python.', en: 'RESTful APIs and the university’s financial and academic management system with Next.js, NestJS and Python.' },
+          { pt: 'Integração com o ERP Primavera (módulos académicos, financeiros e administrativos), ETL e migração de dados.', en: 'Primavera ERP integration (academic, finance and admin modules), ETL and data migration.' },
+          { pt: 'Gestão de redes, servidores e monitorização contínua.', en: 'Network and server management with continuous monitoring.' },
+        ],
+        tags: ['Next.js', 'NestJS', 'Python', 'Primavera'],
+      },
     ],
-    tags: ['Next.js', 'NestJS', 'Python', 'Primavera'],
   },
   {
-    period: '2019 — 2021',
-    role: { pt: 'Desenvolvedor Full-Stack (Estagiário)', en: 'Full-Stack Developer (Intern)' },
     org: 'Universidade Zambeze',
+    url: 'https://unizambeze.ac.mz/',
     place: 'Beira',
-    points: [
-      { pt: 'Sistema de Gestão Académica em PHP/Laravel e plataforma de ensino a distância (Moodle), optimizando processos académicos e a gestão de emolumentos.', en: 'Academic Management System in PHP/Laravel and a Moodle distance-learning platform, streamlining academic processes and fee management.' },
+    roles: [
+      {
+        period: '2019 — 2021',
+        role: { pt: 'Desenvolvedor Full-Stack (Estagiário)', en: 'Full-Stack Developer (Intern)' },
+        points: [
+          { pt: 'Sistema de Gestão Académica em PHP/Laravel e plataforma de ensino a distância (Moodle), optimizando processos académicos e a gestão de emolumentos.', en: 'Academic Management System in PHP/Laravel and a Moodle distance-learning platform, streamlining academic processes and fee management.' },
+        ],
+        tags: ['Laravel', 'Moodle'],
+      },
     ],
-    tags: ['Laravel', 'Moodle'],
   },
 ];
 
@@ -640,21 +665,32 @@ function renderSkills(first) {
 
 const timelineEl = document.getElementById('timeline');
 function renderExperience(first) {
-  timelineEl.innerHTML = EXPERIENCE.map(
-    (x) => `
-    <li class="tl-item reveal${first ? '' : ' in'}${x.current ? ' current' : ''}">
+  // "2023 — 2024" / { pt: '2024 — Presente', ... } → [início, fim]
+  const span = (r) => tr(r.period).split(' — ');
+  timelineEl.innerHTML = EXPERIENCE.map((x) => {
+    const current = x.roles.some((r) => r.current);
+    const start = Math.min(...x.roles.map((r) => +span(r)[0]));
+    const last = span(x.roles[0]);
+    const period = x.roles.length > 1 ? `${start} — ${last[1] ?? last[0]}` : tr(x.roles[0].period);
+    const multi = x.roles.length > 1;
+    return `
+    <li class="tl-item reveal${first ? '' : ' in'}${current ? ' current' : ''}">
       <div class="tl-meta">
-        <span class="tl-period">${tr(x.period)}</span>
-        ${x.current ? `<span class="tl-now">${UI[lang].now}</span>` : ''}
+        <span class="tl-period">${period}</span>
+        ${current ? `<span class="tl-now">${UI[lang].now}</span>` : ''}
       </div>
       <div class="tl-card">
-        <h3>${tr(x.role)}</h3>
-        <p class="tl-org">${x.org} · ${x.place}</p>
-        <ul class="tl-points">${x.points.map((p) => `<li>${tr(p)}</li>`).join('')}</ul>
-        <ul class="chips">${x.tags.map((t) => `<li>${t}</li>`).join('')}</ul>
+        <p class="tl-org"><a href="${x.url}" target="_blank" rel="noopener">${x.org} <span aria-hidden="true">↗</span></a> · ${x.place}</p>
+        ${x.roles.map((r) => `
+        <div class="tl-role${multi ? ' tl-role-multi' : ''}">
+          <h3>${tr(r.role)}</h3>
+          ${multi ? `<p class="tl-role-period">${tr(r.period)}</p>` : ''}
+          <ul class="tl-points">${r.points.map((p) => `<li>${tr(p)}</li>`).join('')}</ul>
+          <ul class="chips">${r.tags.map((t) => `<li>${t}</li>`).join('')}</ul>
+        </div>`).join('')}
       </div>
-    </li>`
-  ).join('');
+    </li>`;
+  }).join('');
 }
 
 function render(first = false) {
