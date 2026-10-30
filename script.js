@@ -275,16 +275,16 @@ const EXPERIENCE = [
           { pt: 'Administração da infra-estrutura de produção (Linux, Docker), com observabilidade, backups automatizados e planos de continuidade.', en: 'Production infrastructure administration (Linux, Docker) with observability, automated backups and continuity plans.' },
           { pt: 'Conformidade com normas de segurança, privacidade e protecção de dados; boas práticas de QA e testes de regressão.', en: 'Compliance with security, privacy and data-protection standards; QA best practices and regression testing.' },
         ],
-        tags: ['EaD / LMS', 'Linux', 'Docker', 'QA'],
+        tags: [{ pt: 'Liderança técnica', en: 'Tech lead' }, { pt: 'EaD / LMS', en: 'E-learning / LMS' }, 'Linux', 'Docker', 'QA'],
       },
       {
         period: '2023 — 2024',
         role: { pt: 'Programador de Sistemas', en: 'Software Developer' },
         points: [
-          { pt: 'Desenvolvimento de sistemas académicos e plataformas EaD com APIs REST/JSON.', en: 'Built academic systems and distance-learning platforms with REST/JSON APIs.' },
-          { pt: 'Testes funcionais, de integração e de API (Postman); reprodução, documentação e validação de defeitos.', en: 'Functional, integration and API testing (Postman); reproducing, documenting and verifying defects.' },
+          { pt: 'Desenvolvimento de sistemas académicos, plataformas de ensino a distância e apps móveis com Node.js, Next.js/React e React Native, integrados por APIs REST/JSON.', en: 'Built academic systems, distance-learning platforms and mobile apps with Node.js, Next.js/React and React Native, connected through REST/JSON APIs.' },
+          { pt: 'Testes funcionais, de integração e de API; reprodução, documentação e validação de defeitos com a equipa.', en: 'Functional, integration and API testing; reproducing, documenting and verifying defects with the team.' },
         ],
-        tags: ['REST APIs', 'Postman', 'EaD'],
+        tags: ['Node.js', 'Next.js', 'React', 'React Native', 'REST APIs'],
       },
     ],
   },
@@ -298,12 +298,12 @@ const EXPERIENCE = [
         role: { pt: 'Consultor Sénior em Desenvolvimento de Software', en: 'Senior Software Development Consultant' },
         current: true,
         points: [
-          { pt: 'Aplicações web, móveis e PWA de alta utilização (Next.js, NestJS, React Native) com pagamentos por carteiras móveis.', en: 'High-traffic web, mobile and PWA apps (Next.js, NestJS, React Native) with mobile-wallet payments.' },
+          { pt: 'Aplicações web, móveis e PWA de alta utilização (Next.js, NestJS, React Native) com pagamentos por M-Pesa, e-Mola e mKesh.', en: 'High-traffic web, mobile and PWA apps (Next.js, NestJS, React Native) with M-Pesa, e-Mola and mKesh payments.' },
           { pt: 'Integração de APIs e serviços de terceiros, incluindo a emissão de tokens de energia pré-paga na plataforma SolarEc do FUNAE.', en: 'API and third-party integrations, including prepaid energy token issuance on FUNAE’s SolarEc platform.' },
           { pt: 'Testes de APIs e integrações em sandbox: callbacks, cenários de erro e conciliação.', en: 'Sandbox testing of APIs and integrations: callbacks, error scenarios and reconciliation.' },
           { pt: 'Implantação e operação em produção (SMS, seguros, bilhética, sistemas municipais) com CI/CD e monitorização.', en: 'Deploying and operating production platforms (SMS, insurance, ticketing, municipal systems) with CI/CD and monitoring.' },
         ],
-        tags: ['Next.js', 'NestJS', 'React Native', 'M-Pesa / e-Mola', 'CI/CD'],
+        tags: ['Next.js', 'NestJS', 'React Native', 'PWA', 'M-Pesa / e-Mola / mKesh', 'CI/CD'],
       },
     ],
   },
@@ -321,7 +321,7 @@ const EXPERIENCE = [
           { pt: 'Soluções USSD com IA aplicada para zonas rurais com conectividade limitada.', en: 'AI-powered USSD solutions for rural areas with limited connectivity.' },
           { pt: 'Equipas ágeis (Scrum/Kanban) com revisões de código e testes automatizados em pipelines GitHub Actions.', en: 'Agile teams (Scrum/Kanban) with code reviews and automated tests in GitHub Actions pipelines.' },
         ],
-        tags: ['LLMs', 'n8n', 'NestJS', 'Spring Boot', 'USSD'],
+        tags: [{ pt: 'IA / LLMs', en: 'AI / LLMs' }, 'n8n', 'NestJS', 'Spring Boot', 'USSD', 'GitHub Actions'],
       },
     ],
   },
@@ -338,7 +338,7 @@ const EXPERIENCE = [
           { pt: 'Integração com o ERP Primavera (módulos académicos, financeiros e administrativos), ETL e migração de dados.', en: 'Primavera ERP integration (academic, finance and admin modules), ETL and data migration.' },
           { pt: 'Gestão de redes, servidores e monitorização contínua.', en: 'Network and server management with continuous monitoring.' },
         ],
-        tags: ['Next.js', 'NestJS', 'Python', 'Primavera'],
+        tags: ['Next.js', 'NestJS', 'Python', 'ERP Primavera', 'ETL'],
       },
     ],
   },
@@ -353,7 +353,7 @@ const EXPERIENCE = [
         points: [
           { pt: 'Sistema de Gestão Académica em PHP/Laravel e plataforma de ensino a distância (Moodle), optimizando processos académicos e a gestão de emolumentos.', en: 'Academic Management System in PHP/Laravel and a Moodle distance-learning platform, streamlining academic processes and fee management.' },
         ],
-        tags: ['Laravel', 'Moodle'],
+        tags: ['PHP / Laravel', 'Moodle'],
       },
     ],
   },
@@ -686,7 +686,7 @@ function renderExperience(first) {
           <h3>${tr(r.role)}</h3>
           ${multi ? `<p class="tl-role-period">${tr(r.period)}</p>` : ''}
           <ul class="tl-points">${r.points.map((p) => `<li>${tr(p)}</li>`).join('')}</ul>
-          <ul class="chips">${r.tags.map((t) => `<li>${t}</li>`).join('')}</ul>
+          <ul class="chips">${r.tags.map((t) => `<li>${tr(t)}</li>`).join('')}</ul>
         </div>`).join('')}
       </div>
     </li>`;
